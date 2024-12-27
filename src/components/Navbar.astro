@@ -2,16 +2,34 @@
 import Image from "astro/components/Image.astro"
 ---
 
-<nav class="py-4 px-24 flex flex-row justify-between border-b border-b-white20">
-	<ul class="flex flex-row gap-8">
-		<li><a href="">O nás</a></li>
-		<li><a href="">Naše kérky</a></li>
-		<li><a href="">Náš tým</a></li>
-		<li><a href="">Blog</a></li>
-	</ul>
-	<ul class="flex flex-row gap-8 items-center">
-		<li><a href=""><Image width="24" height={24} src="/mailIcon.svg" alt="tlačítko pro mail"/></a></li>
-		<li><a href=""><Image width="24" height={24} src="/instagramIcon.svg" alt="tlačítko pro instagram"/></a></li>
-		<li><a href="" class="py-[6px] px-3 rounded-[3px] border border-white20">Objednej si termín!</a></li>
-	</ul>
+<nav class="flex flex-col fixed bg-dark w-full">
+	<div class="py-4 px-24 flex flex-row justify-between border-b border-b-white20">
+		<ul class="hidden lg:flex flex-row gap-8">
+			<li><a href="">O nás</a></li>
+			<li><a href="">Naše kérky</a></li>
+			<li><a href="">Náš tým</a></li>
+			<li><a href="">Blog</a></li>
+		</ul>
+		<ul class="flex flex-row gap-8 items-center">
+			<li class="hidden lg:flex"><a href=""><Image width="24" height={24} src="/mailIcon.svg" alt="tlačítko pro mail"/></a></li>
+			<li class="hidden lg:flex"><a href=""><Image width="24" height={24} src="/instagramIcon.svg" alt="tlačítko pro instagram"/></a></li>
+			<li><a href="" class="py-[6px] px-3 rounded-[3px] border border-white20">Objednej si termín!</a></li>
+		</ul>
+		<div class="lg:hidden cursor-pointer" id="JSBurgerButton">
+			<Image width={32} height={32} src={"/burgerIcon.svg"} alt={"Burger icon"} />
+		</div>
+	</div>
+
+	<div class="flex flex-col bg-dark h-screen overflow-hidden hidden lg:hidden" id="JSMobileMenu">
+		asdsa
+	</div>
 </nav>
+
+<script>
+	const burgerButton = document.getElementById("JSBurgerButton");
+	const mobileMenu = document.getElementById("JSMobileMenu");
+
+	burgerButton?.addEventListener("click", () => {
+		mobileMenu?.classList.contains("hidden") ? mobileMenu?.classList.remove("hidden") : mobileMenu?.classList.add("hidden");
+	})
+</script>
