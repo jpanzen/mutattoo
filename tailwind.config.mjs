@@ -4,7 +4,8 @@ export default {
 	theme: {
 	  extend: {
 		fontFamily: {
-				  nunito: ["Nunito", "sans-serif"]
+				  nunito: ["Nunito", "sans-serif"],
+				  unifraktur: ["Cloister Black", "sans-serif"]
 			  },
 			  colors: {
 				  dark: "#1A1A1A",
@@ -17,7 +18,8 @@ export default {
 			  backgroundImage: {
 				  headerGradient: "radial-gradient(circle at top, rgba(52,127,182,1) 0%, rgba(25,69,132,1) 100%);",
 				  darkGradient: "linear-gradient(rgba(0,0,0,0), rgba(26,26,26,1))",
-				  lightGradient: "linear-gradient(rgba(26,26,26,0), rgba(255,255,255,0.05))"
+				  lightGradient: "linear-gradient(rgba(26,26,26,0), rgba(255,255,255,0.05))",
+				  featureCard: "url('/feature-bg.webp')"
 			  }
 	  },
 	},

@@ -1,6 +1,7 @@
 ---
 import Base from "../layouts/Base.astro"
 import Image from "astro/components/Image.astro"
+import Member from "../components/Member.astro"
 ---
 
 <Base>
@@ -9,7 +10,7 @@ import Image from "astro/components/Image.astro"
 			<Image src={"/logo.png"} width={110} height={110} alt={"Logo mutattoo"}/>
 			<Image src={"/logo2.png"} width={500} height={95.44} alt={"Nápis mutattoo"}/>
 		</div>
-		<p class="text-2xl text-center">Profesionální tetérské<br>studio v Havířově</p>
+		<h1 class="text-2xl text-center">Profesionální tetérské<br>studio v Havířově</h1>
 		<div class="flex flex-row gap-[30px]">
 			<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-white10 rounded-[3px]" href="">
 				<Image src={"/calendarIcon.svg"} width={16} height={16} alt={"Ikona kalendáře"}/>
@@ -21,35 +22,41 @@ import Image from "astro/components/Image.astro"
 			</a>
 		</div>
 	</div>
-	<div>asdja</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
-	<div>30</div>
+	
+	<div class="flex flex-col items-center p-24 gap-16 bg-lightGradient">
+		<div class="flex flex-col items-center px-10 py-20 gap-8 text-center border border-white20 rounded-md w-[1200px] about-us">
+			<p class="text-[24px]">Jsme tatérské studio v Havířově.<br>Skládáme se z dvou certifikovaných tatérů<br>a nadšených umělců.</p>
+			<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-white10 rounded-[3px]" href="">
+				Naši tatéři
+			</a>
+		</div>
+		<div class="flex flex-col gap-[30px]">
+			<h2 class="font-unifraktur text-[48px]">Máme a nabízíme</h2>
+			<div class="flex flex-row flex-wrap w-[1200px] text-[24px] gap-[30px]">
+				<div class="flex flex-col rounded-md border border-white20 p-5 grow bg-featureCard bg-cover">
+					<Image src={"/paletteIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"self-end"} />
+					<p>Vlastní<br>návrhy</p>
+				</div>
+				<div class="flex flex-col rounded-md border border-white20 p-5 grow bg-featureCard bg-cover">
+					<Image src={"/caligraphicIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"self-end"} />
+					<p>Kvalitní<br>vybavení</p>
+				</div>
+				<div class="flex flex-col rounded-md border border-white20 p-5 grow bg-featureCard bg-cover">
+					<Image src={"/healthIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"self-end"} />
+					<p>Čisté<br>prostředí</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="flex flex-col items-center p-24 bg-lightGradient">
+		<div class="flex flex-col gap-8 w-[1200px]">
+			<h2 class="font-unifraktur text-[48px]">Náš tým</h2>
+			<div class="flex flex-row flex-wrap w-[1200px] text-[24px] gap-[30px]">
+				<Member name="Alex" description="Tohle je Alex" igButton="Sleduj Alexe" photo="alex-bg" />
+				<Member name="Luboš" description="Tohle je Luboš" igButton="Sleduj Luboše" photo="lubos-bg" />
+				<Member name="Petr" description="Tohle je Petr" igButton="Sleduj Petra" photo="petr-bg" />
+			</div>
+		</div>
+	</div>
 </Base>

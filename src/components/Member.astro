@@ -1,0 +1,17 @@
+---
+import Image from "astro/components/Image.astro";
+const { name, description, igButton, photo } = Astro.props;
+---
+
+<div class="flex flex-col rounded-md border border-white20 grow bg-dark">
+	<div class=`flex flex-row items-end p-5 ${photo} h-[300px] rounded-md`>
+		<h3 class="font-unifraktur text-[48px]">{name}</h3>
+	</div>
+	<div class="flex flex-col p-5 gap-8">
+		<p>{description}</p>
+		<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-white10 rounded-[3px] text-base w-fit" href="">
+			<Image src={"/instagramIcon.svg"} width={16} height={16} alt={"Instagram ikona"} />
+			{igButton}
+		</a>
+	</div>
+</div>
