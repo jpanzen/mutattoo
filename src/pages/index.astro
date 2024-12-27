@@ -1,0 +1,24 @@
+---
+import Base from "../layouts/Base.astro"
+import Image from "astro/components/Image.astro"
+---
+
+<Base>
+	<div class="flex flex-col items-center p-24 gap-[30px] header-bg">
+		<div class="flex flex-row gap-[30px]">
+			<Image src={"/logo.png"} width={110} height={110} alt={"Logo mutattoo"}/>
+			<Image src={"/logo2.png"} width={500} height={95.44} alt={"Nápis mutattoo"}/>
+		</div>
+		<p class="text-2xl text-center">Profesionální tetérské<br>studio v Havířově</p>
+		<div class="flex flex-row gap-[30px]">
+			<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-white10 rounded-[3px]" href="">
+				<Image src={"/calendarIcon.svg"} width={16} height={16} alt={"Ikona kalendáře"}/>
+				Chci termín!
+			</a>
+			<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 rounded-[3px]" href="">
+				<Image src={"/galleryIcon.svg"} width={16} height={16} alt={"Ikona galerie"}/>
+				Naše kérky
+			</a>
+		</div>
+	</div>
+</Base>
