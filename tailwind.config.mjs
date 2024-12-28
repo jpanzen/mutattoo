@@ -19,7 +19,14 @@ export default {
 				  headerGradient: "radial-gradient(circle at top, rgba(52,127,182,1) 0%, rgba(25,69,132,1) 100%);",
 				  darkGradient: "linear-gradient(rgba(0,0,0,0), rgba(26,26,26,1))",
 				  lightGradient: "linear-gradient(rgba(26,26,26,0), rgba(255,255,255,0.05))",
-				  featureCard: "url('/feature-bg.webp')"
+				  featureCard: "url('/feature-bg.webp')",
+
+				  tattoo1: "url('/kerky/tattoo01.webp')",
+				  tattoo2: "url('/kerky/tattoo02.webp')",
+				  tattoo3: "url('/kerky/tattoo03.webp')",
+				  tattoo4: "url('/kerky/tattoo04.webp')",
+				  tattoo5: "url('/kerky/tattoo05.webp')",
+				  tattoo6: "url('/kerky/tattoo06.webp')"
 			  }
 	  },
 	},
