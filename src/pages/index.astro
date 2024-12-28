@@ -99,4 +99,38 @@ import Member from "../components/Member.astro"
 			</div>
 		</div>
 	</div>
+
+	<div class="flex flex-col items-center p-24 bg-lightGradient">
+		<div class="flex flex-col gap-8 w-[1200px] max-w-full">
+			<h2 class="font-unifraktur text-[48px]">Chceš tetování?</h2>
+			<div class="flex flex-col gap-4">
+				<p>Uvažuješ nad kérce od nás? Mrkni na náš<br>kalendář a vyber si termín, který ti vyhovuje.</p>
+				<p>Potřebuješ se na cokoliv zeptat? Něco ti není<br>jasné? Neváhej nám napsat na Instagramu.</p>
+			</div>
+			<div class="flex flex-row gap-[30px]">
+				<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-white10 rounded-[3px]" href="">
+					<Image src={"/calendarIcon.svg"} width={16} height={16} alt={"Ikona kalendáře"}/>
+					Chci termín!
+				</a>
+				<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 rounded-[3px]" href="">
+					<Image src={"/instagramIcon.svg"} width={16} height={16} alt={"Ikona galerie"}/>
+					Sleduj náš IG
+				</a>
+			</div>
+			<div>
+				<div class="flex px-3 py-[6px] items-center gap-[10px]">
+					<Image src={"/mapIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
+					<p>Národní třída 666, Havířov</p>
+				</div>
+				<div class="flex px-3 py-[6px] items-center gap-[10px]">
+					<Image src={"/phoneIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
+					<p>+420 722 550 354</p>
+				</div>
+				<div class="flex px-3 py-[6px] items-center gap-[10px]">
+					<Image src={"/mailIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
+					<p>lubos.muta@seznam.cz</p>
+				</div>
+			</div>
+		</div>
+	</div>
 </Base>

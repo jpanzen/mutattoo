@@ -15,6 +15,13 @@
     background-repeat: no-repeat;
 	}
 
+    .footer-bg{
+        background-image: url('/header-bg.webp');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
     .lubos-bg{
 		background: 
         linear-gradient(rgba(0, 0, 0, 0) 70%, rgba(26, 26, 26, 1) 100%),

@@ -1,0 +1,19 @@
+---
+import Image from "astro/components/Image.astro"
+import Menu from "./Menu.astro"
+---
+
+<footer class="flex flex-col p-10 items-center gap-8 footer-bg border-t border-white20">
+	<Image src={"/logo.png"} width={72} height={72} alt={"Logo mutattoo"} />
+	<ul class="flex gap-8">
+		<Menu />
+	</ul>
+	<p class="text-[12px] text-white40">© <span id="year" /> Mutattoo</p>
+</footer>
+
+<script>
+	const yearElement = document.getElementById("year");
+	if (yearElement) {
+		yearElement.innerHTML = new Date().getFullYear().toString();
+	}
+</script>
