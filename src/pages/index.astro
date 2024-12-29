@@ -11,7 +11,7 @@ import Member from "../components/Member.astro"
 		</div>
 		<h1 class="text-2xl text-center">Profesionální tetérské<br>studio v Havířově</h1>
 		<div class="flex flex-row gap-[30px]">
-			<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-white10 rounded-[3px]" href="">
+			<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-white10 rounded-[3px]" target="_blank" href="https://cal.com/jan-panzenberger-zva0oq/kerka" >
 				<Image src={"/calendarIcon.svg"} width={16} height={16} alt={"Ikona kalendáře"}/>
 				Chci termín!
 			</a>
@@ -22,7 +22,7 @@ import Member from "../components/Member.astro"
 		</div>
 	</div>
 	
-	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 gap-16 bg-lightGradient">
+	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 gap-16 bg-lightGradient" id="o-nas">
 		<div class="flex flex-col items-center px-10 py-20 gap-8 text-center border border-white20 rounded-md w-[1200px] max-w-full about-us">
 			<p class="text-[24px]">Jsme tatérské studio v Havířově.<br>Skládáme se z dvou certifikovaných tatérů<br>a nadšených umělců.</p>
 			<div class="flex flex-col md:flex-row gap-8">
@@ -36,24 +36,24 @@ import Member from "../components/Member.astro"
 		</div>
 		<div class="flex flex-col gap-[30px] w-[1200px] max-w-full">
 			<h2 class="font-unifraktur text-[48px]">Máme a nabízíme</h2>
-			<div class="flex flex-row text-[24px] gap-[30px] justify-between flex-wrap">
-				<div class="flex flex-col rounded-md border border-white20 p-5 bg-featureCard bg-cover grow">
-					<Image src={"/paletteIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"self-end"} />
+			<div class="flex flex-col md:flex-row text-[24px] gap-[30px] justify-between flex-wrap">
+				<div class="flex flex-row-reverse justify-between md:flex-col rounded-md border border-white20 p-5 bg-featureCard bg-cover grow">
+					<Image src={"/paletteIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
 					<p>Vlastní<br>návrhy</p>
 				</div>
-				<div class="flex flex-col rounded-md border border-white20 p-5  bg-featureCard bg-cover grow">
-					<Image src={"/caligraphicIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"self-end"} />
+				<div class="flex flex-row-reverse justify-between md:flex-col rounded-md border border-white20 p-5  bg-featureCard bg-cover grow">
+					<Image src={"/caligraphicIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
 					<p>Kvalitní<br>vybavení</p>
 				</div>
-				<div class="flex flex-col rounded-md border border-white20 p-5  bg-featureCard bg-cover grow">
-					<Image src={"/healthIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"self-end"} />
+				<div class="flex flex-row-reverse justify-between md:flex-col rounded-md border border-white20 p-5  bg-featureCard bg-cover grow">
+					<Image src={"/healthIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
 					<p>Čisté<br>prostředí</p>
 				</div>
 			</div>
 		</div>
 	</div>
 
-	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 bg-lightGradient">
+	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 bg-lightGradient" id="nasi-tateri">
 		<div class="flex flex-col gap-8 w-[1200px] max-w-full justify-start">
 			<h2 class="font-unifraktur text-[48px]">Náš tým</h2>
 			<div class="flex flex-row flex-wrap w-[1200px] max-w-full text-[24px] gap-[30px]">
@@ -64,7 +64,7 @@ import Member from "../components/Member.astro"
 		</div>
 	</div>
 
-	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 bg-lightGradient">
+	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 bg-lightGradient" id="nase-kerky">
 		<div class="flex flex-col gap-8 w-[1200px] max-w-full">
 			<h2 class="font-unifraktur text-[48px]">Naše práce</h2>
 			<div class="flex flex-col gap-2 md:gap-4 lg:gap-8">
@@ -95,6 +95,20 @@ import Member from "../components/Member.astro"
 						</a>
 					</div>
 				</div>
+				<div class="flex flex-col md:flex-row gap-8 justify-evenly">
+					<div class="p-5 rounded-md border border-white20 bg-featureCard bg-cover w-full">
+						<p class="text-white40">@eve.linka</p>
+						<p>Skvělý člověk a tatér v jednom! 🔥</p>
+					</div>
+					<div class="p-5 rounded-md border border-white20 bg-featureCard bg-cover w-full">
+						<p class="text-white40">@tmtbi</p>
+						<p>Jako vždy spokojenost, díky!💥</p>
+					</div>
+					<div class="p-5 rounded-md border border-white20 bg-featureCard bg-cover w-full">
+						<p class="text-white40">@pavlinazajdova</p>
+						<p>Nejlepší studio... nejlepší tatér ☝️</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -107,7 +121,7 @@ import Member from "../components/Member.astro"
 				<p>Potřebuješ se na cokoliv zeptat? Něco ti není<br>jasné? Neváhej nám napsat na Instagramu.</p>
 			</div>
 			<div class="flex flex-col md:flex-row gap-[30px]">
-				<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-white10 rounded-[3px]" href="">
+				<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-white10 rounded-[3px]" target="_blank" href="https://cal.com/jan-panzenberger-zva0oq/kerka">
 					<Image src={"/calendarIcon.svg"} width={16} height={16} alt={"Ikona kalendáře"}/>
 					Chci termín!
 				</a>
