@@ -12,11 +12,11 @@ import Member from "../components/Member.astro"
 		<h1 class="text-2xl text-center">Profesionální tetérské<br>studio v Havířově</h1>
 		<div class="flex flex-row gap-[30px]">
 			<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-white10 rounded-[3px]" target="_blank" href="https://cal.com/jan-panzenberger-zva0oq/kerka" >
-				<Image src={"/calendarIcon.svg"} width={16} height={16} alt={"Ikona kalendáře"}/>
+				<Image src={"/ikonky/calendarIcon.svg"} width={16} height={16} alt={"Ikona kalendáře"}/>
 				Chci termín!
 			</a>
 			<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 rounded-[3px]" href="">
-				<Image src={"/galleryIcon.svg"} width={16} height={16} alt={"Ikona galerie"}/>
+				<Image src={"/ikonky/galleryIcon.svg"} width={16} height={16} alt={"Ikona galerie"}/>
 				Naše studio
 			</a>
 		</div>
@@ -38,15 +38,15 @@ import Member from "../components/Member.astro"
 			<h2 class="font-unifraktur text-[48px]">Máme a nabízíme</h2>
 			<div class="flex flex-col md:flex-row text-[24px] gap-[30px] justify-between flex-wrap">
 				<div class="flex flex-row-reverse justify-between md:flex-col rounded-md border border-white20 p-5 bg-featureCard bg-cover grow">
-					<Image src={"/paletteIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
+					<Image src={"/ikonky/paletteIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
 					<p>Vlastní<br>návrhy</p>
 				</div>
 				<div class="flex flex-row-reverse justify-between md:flex-col rounded-md border border-white20 p-5  bg-featureCard bg-cover grow">
-					<Image src={"/caligraphicIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
+					<Image src={"/ikonky/caligraphicIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
 					<p>Kvalitní<br>vybavení</p>
 				</div>
 				<div class="flex flex-row-reverse justify-between md:flex-col rounded-md border border-white20 p-5  bg-featureCard bg-cover grow">
-					<Image src={"/healthIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
+					<Image src={"/ikonky/healthIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
 					<p>Čisté<br>prostředí</p>
 				</div>
 			</div>
@@ -90,7 +90,7 @@ import Member from "../components/Member.astro"
 					</div>
 					<div class="flex justify-end items-end basis-1/2 md:basis-1/3 h-80 bg-tattoo6 bg-center bg-cover p-5 rounded-md border border-white20">
 						<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-dark60 rounded-[3px] text-base w-fit" href="">
-							<Image src={"/instagramIcon.svg"} width={16} height={16} alt={"Instagram ikona"} />
+							<Image src={"/ikonky/instagramIcon.svg"} width={16} height={16} alt={"Instagram ikona"} />
 							Chceš vidět více?
 						</a>
 					</div>
@@ -113,7 +113,7 @@ import Member from "../components/Member.astro"
 		</div>
 	</div>
 
-	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 bg-lightGradient">
+	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 bg-lightGradient overflow-hidden relative">
 		<div class="flex flex-col gap-8 w-[1200px] max-w-full">
 			<h2 class="font-unifraktur text-[48px]">Chceš tetování?</h2>
 			<div class="flex flex-col gap-4">
@@ -122,28 +122,41 @@ import Member from "../components/Member.astro"
 			</div>
 			<div class="flex flex-col md:flex-row gap-[30px]">
 				<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-white10 rounded-[3px]" target="_blank" href="https://cal.com/jan-panzenberger-zva0oq/kerka">
-					<Image src={"/calendarIcon.svg"} width={16} height={16} alt={"Ikona kalendáře"}/>
+					<Image src={"/ikonky/calendarIcon.svg"} width={16} height={16} alt={"Ikona kalendáře"}/>
 					Chci termín!
 				</a>
 				<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 rounded-[3px]" href="">
-					<Image src={"/instagramIcon.svg"} width={16} height={16} alt={"Ikona galerie"}/>
+					<Image src={"/ikonky/instagramIcon.svg"} width={16} height={16} alt={"Ikona galerie"}/>
 					Sleduj náš IG
 				</a>
 			</div>
 			<div>
 				<div class="flex px-3 py-[6px] items-center gap-[10px]">
-					<Image src={"/mapIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
+					<Image src={"/ikonky/mapIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
 					<p>Národní třída 666, Havířov</p>
 				</div>
 				<div class="flex px-3 py-[6px] items-center gap-[10px]">
-					<Image src={"/phoneIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
+					<Image src={"/ikonky/phoneIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
 					<p>+420 722 550 354</p>
 				</div>
 				<div class="flex px-3 py-[6px] items-center gap-[10px]">
-					<Image src={"/mailIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
+					<Image src={"/ikonky/mailIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
 					<p>lubos.muta@seznam.cz</p>
 				</div>
 			</div>
 		</div>
+		<Image width={120} height={120} src="/tateri/Lubos.webp" alt="Parallax image" class="JS-animate-down top-0 right-20 absolute" />
 	</div>
 </Base>
+
+<script>
+	import { animate, scroll } from "motion"
+
+	const animation = animate(
+		".JS-animate-down",
+		{ transform: ["translateY(-2000%)", "translateY(300%)"] },
+		{ ease: "linear" }
+	)
+
+	scroll(animation)
+</script>

@@ -3,18 +3,18 @@ import Image from "astro/components/Image.astro"
 import Menu from "./Menu.astro"
 ---
 
-<nav class="flex flex-col fixed bg-dark w-full">
+<nav class="flex flex-col fixed bg-dark w-full z-20">
 	<div class="py-4 px-5 md:px-10 lg:px-14 flex flex-row justify-between border-b border-b-white20">
 		<ul class="hidden lg:flex flex-row gap-8">
 			<Menu />
 		</ul>
 		<ul class="flex flex-row gap-8 items-center">
-			<li class="hidden lg:flex"><a href=""><Image width="24" height={24} src="/mailIcon.svg" alt="tlačítko pro mail"/></a></li>
-			<li class="hidden lg:flex"><a href=""><Image width="24" height={24} src="/instagramIcon.svg" alt="tlačítko pro instagram"/></a></li>
+			<li class="hidden lg:flex"><a href=""><Image width="24" height={24} src="/ikonky/mailIcon.svg" alt="tlačítko pro mail"/></a></li>
+			<li class="hidden lg:flex"><a href=""><Image width="24" height={24} src="/ikonky/instagramIcon.svg" alt="tlačítko pro instagram"/></a></li>
 			<li><a href="https://cal.com/jan-panzenberger-zva0oq/kerka" target="_blank" class="py-[6px] px-3 rounded-[3px] border border-white20">Objednej si termín!</a></li>
 		</ul>
 		<div class="lg:hidden cursor-pointer" id="JSBurgerButton">
-			<Image width={32} height={32} src={"/burgerIcon.svg"} alt={"Burger icon"} />
+			<Image width={32} height={32} src={"/ikonky/burgerIcon.svg"} alt={"Burger icon"} />
 		</div>
 	</div>
 

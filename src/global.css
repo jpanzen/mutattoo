@@ -25,7 +25,7 @@
     .lubos-bg{
 		background: 
         linear-gradient(rgba(0, 0, 0, 0) 70%, rgba(26, 26, 26, 1) 100%),
-        url('/Lubos.webp');
+        url('/tateri/Lubos.webp');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@
     .alex-bg{
 		background: 
         linear-gradient(rgba(0, 0, 0, 0) 70%, rgba(26, 26, 26, 1) 100%),
-        url('/Alex.webp');
+        url('/tateri/Alex.webp');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
@@ -43,7 +43,7 @@
     .petr-bg{
 		background: 
         linear-gradient(rgba(0, 0, 0, 0) 70%, rgba(26, 26, 26, 1) 100%),
-        url('/Petr.webp');
+        url('/tateri/Petr.webp');
     background-size: cover;
     background-position: top;
     background-repeat: no-repeat;
