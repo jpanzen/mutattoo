@@ -64,8 +64,8 @@ import Member from "../components/Member.astro"
 		</div>
 	</div>
 
-	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 bg-lightGradient" id="nase-kerky">
-		<div class="flex flex-col gap-8 w-[1200px] max-w-full">
+	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 bg-lightGradient relative overflow-hidden" id="nase-kerky">
+		<div class="flex flex-col gap-8 w-[1200px] max-w-full z-10">
 			<h2 class="font-unifraktur text-[48px]">Naše práce</h2>
 			<div class="flex flex-col gap-2 md:gap-4 lg:gap-8">
 				<div class="flex flex-row gap-2 md:gap-4 lg:gap-8">
@@ -111,6 +111,9 @@ import Member from "../components/Member.astro"
 				</div>
 			</div>
 		</div>
+		<Image width={456} height={620} src="/stencily/stencil02.webp" alt="Parallax image" class="JS-animate2 top-0 right-[0%] absolute" />
+		<Image width={960} height={720} src="/stencily/stencil03.webp" alt="Parallax image" class="JS-animate3 top-0 left-[0%] absolute" />
+		<Image width={456} height={620} src="/stencily/stencil06.webp" alt="Parallax image" class="JS-animate6 top-[50%] right-[2%] absolute" />
 	</div>
 
 	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 bg-lightGradient overflow-hidden relative">
@@ -145,18 +148,36 @@ import Member from "../components/Member.astro"
 				</div>
 			</div>
 		</div>
-		<Image width={120} height={120} src="/tateri/Lubos.webp" alt="Parallax image" class="JS-animate-down top-0 right-20 absolute" />
+		<Image width={456} height={620} src="/stencily/stencil07.webp" alt="Parallax image" class="JS-animate7 top-0 right-[20%] absolute" />
 	</div>
 </Base>
 
 <script>
 	import { animate, scroll } from "motion"
 
-	const animation = animate(
-		".JS-animate-down",
-		{ transform: ["translateY(-2000%)", "translateY(300%)"] },
+	const animation7 = animate(
+		".JS-animate7",
+		{ transform: ["translateY(-300%)", "translateY(30%)"] },
+		{ ease: "linear" }
+	)
+	const animation2 = animate(
+		".JS-animate2",
+		{ transform: ["translateY(-100%)", "translateY(140%)"] },
+		{ ease: "linear" }
+	)
+	const animation3 = animate(
+		".JS-animate3",
+		{ transform: ["translateY(-100%)", "translateY(100%)"] },
+		{ ease: "linear" }
+	)
+	const animation6 = animate(
+		".JS-animate6",
+		{ transform: ["translateY(300%)", "translateY(-30%)"] },
 		{ ease: "linear" }
 	)
 
-	scroll(animation)
+	scroll(animation7)
+	scroll(animation6)
+	scroll(animation2)
+	scroll(animation3)
 </script>
