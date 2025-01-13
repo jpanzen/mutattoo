@@ -2,34 +2,36 @@
 import Base from "../layouts/Base.astro"
 import Image from "astro/components/Image.astro"
 import Member from "../components/Member.astro"
+
+const artists = await Astro.glob("./artists/*.md")
 ---
 
 <Base>
 	<div class="flex flex-col items-center px-5 md:px-10 lg:px-14 py-[160px] gap-[30px] header-bg">
 		<div class="flex flex-row gap-[30px] max-w-full">
-			<Image src={"/logo-full.png"} width={640} height={110} alt={"Logo mutattoo"} class="object-contain shrink-0" />
+			<Image loading={"eager"} src={"/logo-full.png"} width={640} height={110} alt={"Logo mutattoo"} class="object-contain shrink-0" />
 		</div>
 		<h1 class="text-2xl text-center">Profesionální tetérské<br>studio v Havířově</h1>
 		<div class="flex flex-row gap-[30px]">
 			<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-white10 rounded-[3px]" target="_blank" href="https://cal.com/jan-panzenberger-zva0oq/kerka" >
-				<Image src={"/ikonky/calendarIcon.svg"} width={16} height={16} alt={"Ikona kalendáře"}/>
+				<Image loading={"eager"}  src={"/ikonky/calendarIcon.svg"} width={16} height={16} alt={"Ikona kalendáře"}/>
 				Chci termín!
 			</a>
 			<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 rounded-[3px]" href="">
-				<Image src={"/ikonky/galleryIcon.svg"} width={16} height={16} alt={"Ikona galerie"}/>
+				<Image loading={"eager"}  src={"/ikonky/galleryIcon.svg"} width={16} height={16} alt={"Ikona galerie"}/>
 				Naše studio
 			</a>
 		</div>
 	</div>
-	
-	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 gap-16 bg-lightGradient" id="o-nas">
-		<div class="flex flex-col items-center px-10 py-20 gap-8 text-center border border-white20 rounded-md w-[1200px] max-w-full about-us">
-			<p class="text-[24px]">Jsme tatérské studio v Havířově.<br>Skládáme se z dvou certifikovaných tatérů<br>a nadšených umělců.</p>
+
+	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 gap-16 bg-lightGradient relative overflow-hidden" id="o-nas">
+		<div class="flex flex-col items-center px-10 py-20 gap-8 text-center border border-white20 rounded-md w-[1200px] max-w-full about-us bg-dark z-10">
+			<p class="text-[24px]">Jsme tatérské studio v Havířově.<br>Skládáme se ze tří certifikovaných tatérů<br>a nadšených umělců.</p>
 			<div class="flex flex-col md:flex-row gap-8">
-				<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-dark60 rounded-[3px]" href="">
+				<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-dark60 rounded-[3px]" href="#nasi-tateri">
 					Naši tatéři
 				</a>
-				<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-dark60 rounded-[3px]" href="">
+				<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-dark60 rounded-[3px]" href="#nase-kerky">
 					Naše kérky
 				</a>
 			</div>
@@ -38,30 +40,47 @@ import Member from "../components/Member.astro"
 			<h2 class="font-unifraktur text-[48px]">Máme a nabízíme</h2>
 			<div class="flex flex-col md:flex-row text-[24px] gap-[30px] justify-between flex-wrap">
 				<div class="flex flex-row-reverse justify-between md:flex-col rounded-md border border-white20 p-5 bg-featureCard bg-cover grow">
-					<Image src={"/ikonky/paletteIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
+					<Image loading={"lazy"} src={"/ikonky/paletteIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
 					<p>Vlastní<br>návrhy</p>
 				</div>
 				<div class="flex flex-row-reverse justify-between md:flex-col rounded-md border border-white20 p-5  bg-featureCard bg-cover grow">
-					<Image src={"/ikonky/caligraphicIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
+					<Image loading={"lazy"} src={"/ikonky/caligraphicIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
 					<p>Kvalitní<br>vybavení</p>
 				</div>
 				<div class="flex flex-row-reverse justify-between md:flex-col rounded-md border border-white20 p-5  bg-featureCard bg-cover grow">
-					<Image src={"/ikonky/healthIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
+					<Image loading={"lazy"} src={"/ikonky/healthIcon.svg"} width={48} height={48} alt={"Dekorativní ikona"} class={"md:self-end"} />
 					<p>Čisté<br>prostředí</p>
 				</div>
 			</div>
+			
 		</div>
+		<Image loading={"eager"} width={374} height={385} src="/stencily/stencil01.webp" alt="Parallax stencil" class="JS-animate1 top-0 right-[0%] absolute" />
+		<Image loading={"lazy"} width={287} height={216} src="/stencily/stencil04.webp" alt="Parallax stencil" class="JS-animate4 top-0 right-[5%] absolute" />
+		<Image loading={"eager"} width={390} height={550} src="/stencily/stencil05.webp" alt="Parallax stencil" class="JS-animate5 top-0 left-[5%] absolute" />
 	</div>
 
-	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 bg-lightGradient" id="nasi-tateri">
+	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 bg-lightGradient relative overflow-hidden" id="nasi-tateri">
 		<div class="flex flex-col gap-8 w-[1200px] max-w-full justify-start">
 			<h2 class="font-unifraktur text-[48px]">Náš tým</h2>
 			<div class="flex flex-row flex-wrap w-[1200px] max-w-full text-[24px] gap-[30px]">
-				<Member name="Luboš" description="Tohle je Luboš" igButton="Sleduj Luboše" photo="lubos-bg" aboutButton="O Lubošovi" />
-				<Member name="Alex" description="Tohle je Alex" igButton="Sleduj Alexe" photo="alex-bg" aboutButton="O Alexovi" />
-				<Member name="Petr" description="Tohle je Petr" igButton="Sleduj Petra" photo="petr-bg" aboutButton="O Petrovi" />
+				{artists.map(
+					(artist) => {
+						return(
+							<Member 
+								name={artist.frontmatter.name}
+								description={artist.frontmatter.description} 
+								igButton={artist.frontmatter.ig.button}
+								photo={artist.frontmatter.photo}
+								aboutButton={artist.frontmatter.aboutLabel} 
+								igUrl={artist.frontmatter.ig.link}
+								aboutUrl={artist.url}/>
+						)
+					}
+				)}
 			</div>
 		</div>
+		<Image loading={"lazy"} width={470} height={654} src="/stencily/stencil09.webp" alt="Parallax stencil" class="JS-animate9 top-0 left-[0%] absolute" />
+		<Image loading={"lazy"} width={475} height={1026} src="/stencily/stencil08.webp" alt="Parallax stencil" class="JS-animate8 top-0 right-[0%] absolute" />
 	</div>
 
 	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 bg-lightGradient relative overflow-hidden" id="nase-kerky">
@@ -90,7 +109,7 @@ import Member from "../components/Member.astro"
 					</div>
 					<div class="flex justify-end items-end basis-1/2 md:basis-1/3 h-80 bg-tattoo6 bg-center bg-cover p-5 rounded-md border border-white20">
 						<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-dark60 rounded-[3px] text-base w-fit" href="">
-							<Image src={"/ikonky/instagramIcon.svg"} width={16} height={16} alt={"Instagram ikona"} />
+							<Image loading={"lazy"} src={"/ikonky/instagramIcon.svg"} width={16} height={16} alt={"Instagram ikona"} />
 							Chceš vidět více?
 						</a>
 					</div>
@@ -111,9 +130,9 @@ import Member from "../components/Member.astro"
 				</div>
 			</div>
 		</div>
-		<Image width={456} height={620} src="/stencily/stencil02.webp" alt="Parallax image" class="JS-animate2 top-0 right-[0%] absolute" />
-		<Image width={960} height={720} src="/stencily/stencil03.webp" alt="Parallax image" class="JS-animate3 top-0 left-[0%] absolute" />
-		<Image width={456} height={620} src="/stencily/stencil06.webp" alt="Parallax image" class="JS-animate6 top-[50%] right-[2%] absolute" />
+		<Image loading={"lazy"} width={456} height={620} src="/stencily/stencil02.webp" alt="Parallax stencil" class="JS-animate2 top-0 right-[0%] absolute" />
+		<Image loading={"lazy"} width={960} height={720} src="/stencily/stencil03.webp" alt="Parallax stencil" class="JS-animate3 top-0 left-[0%] absolute" />
+		<Image loading={"lazy"} width={456} height={620} src="/stencily/stencil06.webp" alt="Parallax stencil" class="JS-animate6 top-[50%] right-[2%] absolute" />
 	</div>
 
 	<div class="flex flex-col items-center p-5 md:p-10 lg:p-14 bg-lightGradient overflow-hidden relative">
@@ -125,59 +144,31 @@ import Member from "../components/Member.astro"
 			</div>
 			<div class="flex flex-col md:flex-row gap-[30px]">
 				<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-white10 rounded-[3px]" target="_blank" href="https://cal.com/jan-panzenberger-zva0oq/kerka">
-					<Image src={"/ikonky/calendarIcon.svg"} width={16} height={16} alt={"Ikona kalendáře"}/>
+					<Image loading={"lazy"} src={"/ikonky/calendarIcon.svg"} width={16} height={16} alt={"Ikona kalendáře"}/>
 					Chci termín!
 				</a>
 				<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 rounded-[3px]" href="">
-					<Image src={"/ikonky/instagramIcon.svg"} width={16} height={16} alt={"Ikona galerie"}/>
+					<Image loading={"lazy"} src={"/ikonky/instagramIcon.svg"} width={16} height={16} alt={"Ikona galerie"}/>
 					Sleduj náš IG
 				</a>
 			</div>
 			<div>
 				<div class="flex px-3 py-[6px] items-center gap-[10px]">
-					<Image src={"/ikonky/mapIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
+					<Image loading={"lazy"} src={"/ikonky/mapIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
 					<p>Národní třída 666, Havířov</p>
 				</div>
 				<div class="flex px-3 py-[6px] items-center gap-[10px]">
-					<Image src={"/ikonky/phoneIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
+					<Image loading={"lazy"} src={"/ikonky/phoneIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
 					<p>+420 722 550 354</p>
 				</div>
 				<div class="flex px-3 py-[6px] items-center gap-[10px]">
-					<Image src={"/ikonky/mailIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
+					<Image loading={"lazy"} src={"/ikonky/mailIcon.svg"} width={16} height={16} alt={"Ikona mapky"}/>
 					<p>lubos.muta@seznam.cz</p>
 				</div>
 			</div>
 		</div>
-		<Image width={456} height={620} src="/stencily/stencil07.webp" alt="Parallax image" class="JS-animate7 top-0 right-[20%] absolute" />
+		<Image loading={"lazy"} width={456} height={620} src="/stencily/stencil07.webp" alt="Parallax stencil" class="JS-animate7 top-0 right-[20%] absolute" />
 	</div>
 </Base>
 
-<script>
-	import { animate, scroll } from "motion"
-
-	const animation7 = animate(
-		".JS-animate7",
-		{ transform: ["translateY(-300%)", "translateY(30%)"] },
-		{ ease: "linear" }
-	)
-	const animation2 = animate(
-		".JS-animate2",
-		{ transform: ["translateY(-100%)", "translateY(140%)"] },
-		{ ease: "linear" }
-	)
-	const animation3 = animate(
-		".JS-animate3",
-		{ transform: ["translateY(-100%)", "translateY(100%)"] },
-		{ ease: "linear" }
-	)
-	const animation6 = animate(
-		".JS-animate6",
-		{ transform: ["translateY(300%)", "translateY(-30%)"] },
-		{ ease: "linear" }
-	)
-
-	scroll(animation7)
-	scroll(animation6)
-	scroll(animation2)
-	scroll(animation3)
-</script>
+<script src="/src/scripts/stencilAnimation.js"></script>
