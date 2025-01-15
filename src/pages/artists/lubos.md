@@ -6,4 +6,5 @@ ig:
   link: "https://www.instagram.com/mt_mutattoo/"
 photo: "lubos-bg"
 aboutLabel: "O Lubošovi"
+index: 1
 ---

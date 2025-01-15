@@ -6,5 +6,6 @@ ig:
   link: "https://www.instagram.com/alex_slzk/"
 photo: "alex-bg"
 aboutLabel: "O Alexovi"
+index: 3
 ---
 
