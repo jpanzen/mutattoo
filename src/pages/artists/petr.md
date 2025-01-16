@@ -1,5 +1,7 @@
 ---
+layout: ../../layouts/ArtistLayout.astro
 name: "Petr"
+nameSimple: "petr"
 description: "Tohle je Petr"
 ig:
   button: "Sleduj Petra"
