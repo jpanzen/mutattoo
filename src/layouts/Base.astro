@@ -2,6 +2,7 @@
 import '../global.css'
 import Navbar from "../components/Navbar.astro"
 import Footer from '../components/Footer.astro'
+const { pageName } = Astro.props;
 ---
 
 <!doctype html>
@@ -11,7 +12,7 @@ import Footer from '../components/Footer.astro'
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Site</title>
+		<title>{ pageName || 'Mutattoo - Tatérské studio v Havířově' }</title>
 	</head>
 	<body class="font-nunito bg-dark text-white text-[18px]">
 		<Navbar />
