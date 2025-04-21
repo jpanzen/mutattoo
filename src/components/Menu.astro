@@ -2,8 +2,19 @@
 
 ---
 
-<li><a href="/">Domů</a></li>
-<li><a href="/#o-nas">O nás</a></li>
-<li><a href="/#nase-kerky">Naše kérky</a></li>
-<li><a href="/#nasi-tateri">Náš tým</a></li>
-<li><a href="/blog">Blog</a></li>
+<li><a id="JSMenuLink" href="/">Domů</a></li>
+<li><a id="JSMenuLink" href="/#o-nas">O nás</a></li>
+<li><a id="JSMenuLink" href="/#nase-kerky">Naše kérky</a></li>
+<li><a id="JSMenuLink" href="/#nasi-tateri">Náš tým</a></li>
+<li><a id="JSMenuLink" href="/blog">Blog</a></li>
+
+<script>
+	const mobileMenu = document.getElementById("JSMobileMenu");
+	const menuLinks = document.querySelectorAll("#JSMobileMenu #JSMenuLink");
+
+	menuLinks.forEach(link => {
+		link.addEventListener('click', (event) => {
+			mobileMenu?.classList.contains("hidden") ? mobileMenu?.classList.remove("hidden") : mobileMenu?.classList.add("hidden");
+		});
+	});
+</script>
