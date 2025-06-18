@@ -1,5 +1,4 @@
 ---
-layout: ../../layouts/ArtistLayout.astro
 name: "Petr"
 nameSimple: "petr"
 description: "Spousta zkušeností"
