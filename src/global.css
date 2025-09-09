@@ -49,6 +49,15 @@
     background-repeat: no-repeat;
 	}
 
+    .verca-bg{
+        background: 
+        linear-gradient(rgba(0, 0, 0, 0) 70%, rgba(26, 26, 26, 1) 100%),
+        url('/tateri/Verca.webp');
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    }
+
     .about-us{
         background-image: url('/logo-card.png');
         background-size: 280px;
