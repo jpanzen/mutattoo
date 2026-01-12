@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+import daisyui from "daisyui"
+import typography from "@tailwindcss/typography"
+
 export default {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
@@ -27,22 +30,12 @@ export default {
 				  tattoo4: "url('/kerky/new/tattoo04.webp')",
 				  tattoo5: "url('/kerky/new/tattoo05.webp')",
 				  tattoo6: "url('/kerky/new/tattoo06.webp')",
-				  tattoo6: "url('/kerky/new/tattoo06.webp')",
-				  tattoo6: "url('/kerky/new/tattoo06.webp')",
-				  tattoo6: "url('/kerky/new/tattoo06.webp')",
-				  tattoo6: "url('/kerky/new/tattoo06.webp')",
-				  tattoo6: "url('/kerky/new/tattoo06.webp')",
-				  tattoo6: "url('/kerky/new/tattoo06.webp')",
-				  tattoo6: "url('/kerky/new/tattoo06.webp')",
-				  tattoo6: "url('/kerky/new/tattoo06.webp')",
-				  tattoo6: "url('/kerky/new/tattoo06.webp')",
-				  tattoo6: "url('/kerky/new/tattoo06.webp')",
 			  }
 	  },
 	},
 	plugins: [
-		require('daisyui')
+		typography,
+		daisyui
 	],
-  }
-  
-  
+}
+

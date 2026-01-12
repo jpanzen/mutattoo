@@ -1,0 +1,54 @@
+---
+import Base from "./Base.astro";
+import Image from "astro/components/Image.astro";
+const { content } = Astro.props;
+---
+
+<Base pageName={content.title}>
+    <!-- Header příspěvku -->
+    <div class="flex flex-col items-center px-5 md:px-10 lg:px-14 py-[160px] gap-[20px] header-bg border-b border-white10">
+        <div class="flex gap-3">
+            {content.tags?.map((tag: string) => (
+                <span class="text-[12px] uppercase tracking-[2px] text-white40 border border-white10 px-3 py-1 rounded-full">
+                    {tag}
+                </span>
+            ))}
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-center max-w-[900px] leading-tight tracking-tight">
+            {content.title}
+        </h1>
+        <div class="flex items-center gap-4 mt-4 text-white40 uppercase tracking-widest text-sm">
+            <span>{content.author}</span>
+            <span class="w-1 h-1 bg-white20 rounded-full"></span>
+            <span>{new Date(content.date).toLocaleDateString('cs-CZ')}</span>
+        </div>
+    </div>
+
+    <!-- Obsah příspěvku -->
+    <div class="flex justify-center py-20 px-5 md:px-10 lg:px-14 bg-lightGradient">
+        <article class="prose prose-invert prose-p:text-white60 prose-headings:text-white prose-headings:font-bold prose-h2:text-3xl prose-h2:mt-12 prose-h2:mb-6 prose-h3:text-2xl prose-h3:mt-8 prose-h3:mb-4 max-w-[800px] w-full">
+            <slot />
+            
+            <div class="mt-20 pt-10 border-t border-white10">
+                <a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-dark60 rounded-[3px] w-fit text-sm" href="/blog">
+                    Zpět na blog
+                </a>
+            </div>
+        </article>
+    </div>
+</Base>
+
+<style is:global>
+    /* Stylování Markdown obsahu, pokud nepoužíváš tailwind/typography plugin */
+    .prose h2 {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding-bottom: 0.5rem;
+    }
+    .prose p {
+        margin-bottom: 1.5rem;
+        line-height: 1.8;
+    }
+    .prose strong {
+        color: white;
+    }
+</style>
