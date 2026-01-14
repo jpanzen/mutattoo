@@ -59,7 +59,7 @@ const sortedArtists = artistsRaw.sort((a:any, b:any) => {
 					<p>Čisté<br>prostředí</p>
 				</div>
 			</div>
-			
+
 		</div>
 		<Image loading={"eager"} width={374} height={385} src="/stencily/stencil01.webp" alt="Parallax stencil" class="JS-animate1 top-0 right-[0%] absolute" />
 		<Image loading={"lazy"} width={287} height={216} src="/stencily/stencil04.webp" alt="Parallax stencil" class="JS-animate4 top-0 right-[5%] absolute" />
@@ -73,12 +73,12 @@ const sortedArtists = artistsRaw.sort((a:any, b:any) => {
 				{sortedArtists.map(
 					(artist: any) => {
 						return(
-							<Member 
+							<Member
 								name={artist.frontmatter.name}
-								description={artist.frontmatter.description} 
+								description={artist.frontmatter.description}
 								igButton={artist.frontmatter.ig.button}
 								photo={artist.frontmatter.photo}
-								aboutButton={artist.frontmatter.aboutLabel} 
+								aboutButton={artist.frontmatter.aboutLabel}
 								igUrl={artist.frontmatter.ig.link}
 								aboutUrl={artist.url}/>
 						)
@@ -96,23 +96,23 @@ const sortedArtists = artistsRaw.sort((a:any, b:any) => {
 			<div class="flex flex-col gap-2 md:gap-4 lg:gap-8">
 				<div class="flex flex-row gap-2 md:gap-4 lg:gap-8">
 					<div class="basis-1/2 md:basis-2/3 h-[600px] bg-tattoo1 bg-center bg-cover rounded-md border border-white20">
-						
+
 					</div>
 					<div class="basis-1/2 md:basis-1/3 h-[600px] bg-tattoo2 bg-center bg-cover rounded-md border border-white20">
-						
+
 					</div>
 				</div>
 				<div class="flex flex-row gap-2 md:gap-4 lg:gap-8">
 					<div class="basis-1/2 md:basis-1/3 h-[600px] bg-tattoo3 bg-center bg-cover rounded-md border border-white20">
-						
+
 					</div>
 					<div class="basis-1/2 md:basis-2/3 h-[600px] bg-tattoo4 bg-center bg-cover rounded-md border border-white20">
-						
+
 					</div>
 				</div>
 				<div class="flex flex-row gap-2 md:gap-4 lg:gap-8">
 					<div class="basis-1/2 md:basis-2/3 h-[600px] bg-tattoo5 bg-center bg-cover rounded-md border border-white20">
-						
+
 					</div>
 					<div class="flex justify-end items-end basis-1/2 md:basis-1/3 h-[600px] bg-tattoo6 bg-center bg-cover p-5 rounded-md border border-white20">
 						<a class="flex flex-row gap-3 items-center px-3 py-[6px] border border-white10 bg-dark60 rounded-[3px] text-base w-fit" href="https://instagram.com/mt_mutattoo">
@@ -178,11 +178,11 @@ const sortedArtists = artistsRaw.sort((a:any, b:any) => {
 	</div>
 
 	<div id="saloon-tour" class="hidden fixed flex justify-center items-center h-full w-full z-50 top-0 left-0 bg-dark60">
-		<iframe id="youtube-video" class="h-[90vh] w-[50vh] max-w-[90%] rounded-md border border-white10" 
-			src="https://www.youtube.com/embed/7lXvbQi1Z24?enablejsapi=1&modestbranding=1&controls=0&showinfo=0&rel=0" 
-			title="YouTube video player" 
-			frameborder="0" 
-			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+		<iframe id="youtube-video" class="h-[90vh] w-[50vh] max-w-[90%] rounded-md border border-white10"
+			src="https://www.youtube.com/embed/7lXvbQi1Z24?enablejsapi=1&modestbranding=1&controls=0&showinfo=0&rel=0"
+			title="YouTube video player"
+			frameborder="0"
+			allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
 			allowfullscreen>
 		</iframe>
 	</div>
